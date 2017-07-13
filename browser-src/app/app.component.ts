@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+const WindowsManager = remote.require('application/windows-manager');
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +12,6 @@ export class AppComponent {
 
   constructor() {
     console.log('constructor');
-    const WindowsManager = remote.require('application/windows-manager');
     WindowsManager.openThiefWindow();
   }
 
