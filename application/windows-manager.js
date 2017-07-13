@@ -25,3 +25,7 @@ exports.activate = ()=> {
     createWindow();
   }
 };
+
+exports.openThiefWindow = ()=> {
+  console.log('openThiefWindow');
+};

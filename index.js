@@ -6,10 +6,6 @@ const {app, BrowserWindow} = require('electron');
 const windowsManager = require('application/windows-manager');
 
 const activate = ()=> {
-  // win = new BrowserWindow();
-  // win.loadURL(`file://${__dirname}/index.html`);
-  // win.webContents.openDevTools();
-  // win.on('closed', ()=> win = null);
   windowsManager.activate();
 };
 

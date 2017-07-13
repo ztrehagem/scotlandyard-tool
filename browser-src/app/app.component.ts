@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  constructor() {
+    console.log('constructor');
+    const WindowsManager = remote.require('application/windows-manager');
+    WindowsManager.openThiefWindow();
+  }
+
 }
