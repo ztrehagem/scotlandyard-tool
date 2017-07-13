@@ -4,4 +4,8 @@ interface NodeModule {
   id: string;
 }
 
-declare var remote: any;
+// declare var remote: any;
+
+// declare module 'electron' {
+//   var remote: any;
+// }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as electron from 'electron';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ export class AppComponent {
 
   constructor() {
     console.log('constructor');
-    const WindowsManager = remote.require('application/windows-manager');
-    WindowsManager.openThiefWindow();
+    // const WindowsManager = remote.require('application/windows-manager');
+    // WindowsManager.openThiefWindow();
+    console.log(electron);
   }
 
 }
