@@ -1,6 +1,6 @@
 <section>
   <h3>ゲームに参加</h3>
-  <form #form="ngForm" (ngSubmit)="onJoin(form)" novalidate>
+  <form #joinForm="ngForm" (ngSubmit)="onJoin(joinForm)" novalidate>
     <div>
       <label>IP:(port)</label>
       <input type="text" ngModel required name="address" #address="ngModel">
@@ -11,10 +11,10 @@
 
 <section>
   <h3>ゲームをホスト</h3>
-  <form #form="ngForm" (ngSubmit)="onHost(form)" novalidate>
+  <form #hostForm="ngForm" (ngSubmit)="onHost(hostForm)" novalidate>
     <div>
       <label>port</label>
-      <input type="number" placeholder="default: 39400" ngModel required name="address" #address="ngModel">
+      <input type="number" placeholder="default: {{port}}" ngModel required name="address" #address="ngModel">
       <button type="submit">GO</button>
     </div>
   </form>
