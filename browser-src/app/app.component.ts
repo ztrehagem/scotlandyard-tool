@@ -8,11 +8,11 @@ const WindowsManager = remote.require('application/windows-manager');
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Scotlandyard Online';
 
   constructor() {
     console.log('constructor');
-    WindowsManager.openThiefWindow();
+    // WindowsManager.openThiefWindow();
   }
 
 }

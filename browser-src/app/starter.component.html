@@ -1,0 +1,21 @@
+<section>
+  <h3>ゲームに参加</h3>
+  <form #form="ngForm" (ngSubmit)="onJoin(form)" novalidate>
+    <div>
+      <label>IP:(port)</label>
+      <input type="text" ngModel required name="address" #address="ngModel">
+      <button type="submit">GO</button>
+    </div>
+  </form>
+</section>
+
+<section>
+  <h3>ゲームをホスト</h3>
+  <form #form="ngForm" (ngSubmit)="onHost(form)" novalidate>
+    <div>
+      <label>port</label>
+      <input type="number" placeholder="default: 39400" ngModel required name="address" #address="ngModel">
+      <button type="submit">GO</button>
+    </div>
+  </form>
+</section>
