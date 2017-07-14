@@ -4,12 +4,12 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
-import AppRoutingModule from './app-routing.module';
+import RoutingModule from './routing.module';
 
 // desclarations
-import {AppComponent} from './app.component';
-import {StarterComponent} from "./starter.component";
-import {ThiefComponent} from "./thief.component";
+import {RootComponent} from './components/root';
+import {StarterComponent} from "./components/starter";
+import {ThiefComponent} from "./components/thief";
 
 // providers
 
@@ -19,14 +19,14 @@ import {ThiefComponent} from "./thief.component";
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    RoutingModule
   ],
   declarations: [
-    AppComponent,
+    RootComponent,
     StarterComponent,
     ThiefComponent
   ],
   // providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [RootComponent]
 })
 export class AppModule { }

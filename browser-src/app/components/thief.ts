@@ -3,7 +3,7 @@ import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: 'thief',
-  templateUrl: './thief.component.html'
+  templateUrl: './thief.html'
 })
 export class ThiefComponent implements OnInit {
   ngOnInit(): void {

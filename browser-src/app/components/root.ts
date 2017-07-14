@@ -4,10 +4,10 @@ const WindowsManager = remote.require('application/windows-manager');
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './root.html',
+  styleUrls: ['./root.styl']
 })
-export class AppComponent {
+export class RootComponent {
   title = 'Scotlandyard Online';
 
   constructor() {

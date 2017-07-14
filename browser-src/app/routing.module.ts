@@ -2,8 +2,8 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 
 // components
-import {StarterComponent} from "./starter.component";
-import {ThiefComponent} from "./thief.component";
+import {StarterComponent} from "./components/starter";
+import {ThiefComponent} from "./components/thief";
 
 
 const routes: Routes = [

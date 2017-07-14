@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
 import {NgForm} from "@angular/forms";
-import {DEFAULT_SERVER_PORT} from "./constants";
+import {DEFAULT_SERVER_PORT} from "app/constants";
 
 @Component({
   selector: 'starter',
-  templateUrl: './starter.component.html'
+  templateUrl: './starter.html'
 })
 export class StarterComponent implements OnInit {
   port = DEFAULT_SERVER_PORT;
