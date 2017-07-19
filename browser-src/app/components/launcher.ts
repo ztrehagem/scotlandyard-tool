@@ -8,20 +8,18 @@ import {DEFAULT_SERVER_PORT} from "app/constants";
   styleUrls: ['./launcher.styl'],
   animations: [
     trigger('collapse', [
-      state('uncollapsed', style({
-        height: '*'
-      })),
-      state('collapsed', style({
-        height: 0
-      })),
-      transition('* => *', animate('200ms ease')),
+      transition('void => *', [
+        style({height: 0}), animate('250ms ease-out', style({height: '*'}))
+      ]),
+      transition('* => void', [
+        style({height: '*'}), animate('250ms ease-in', style({height: 0}))
+      ])
     ])
   ]
 })
 export class LauncherComponent implements OnInit {
-  port = DEFAULT_SERVER_PORT;
+  defaultServerPort = DEFAULT_SERVER_PORT;
   collapsed = {join: true, host: true};
-  collapsedStr = {join: 'collapsed', host: 'collapsed'};
 
   ngOnInit(): void {
     console.log('launcher oninit');
@@ -34,6 +32,5 @@ export class LauncherComponent implements OnInit {
   }
   toggleCollapse(target: string) {
     this.collapsed[target] = !this.collapsed[target];
-    this.collapsedStr[target] = this.collapsedStr[target] == 'collapsed' ? 'uncollapsed' : 'collapsed';
   }
 }

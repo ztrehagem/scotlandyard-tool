@@ -6,7 +6,7 @@
       <span class="collapse-arrow" [ngClass]="{collapsed: collapsed.join}"></span>
       <span>ゲームに参加</span>
     </h3>
-    <div class="formwrapper" [@collapse]="collapsedStr.join">
+    <div class="formwrapper" *ngIf="!collapsed.join" [@collapse]>
       <form #joinForm="ngForm" (ngSubmit)="onJoin(joinForm)" novalidate>
         <div>
           <label>IP:(port)</label>
@@ -22,11 +22,11 @@
       <span class="collapse-arrow" [ngClass]="{collapsed: collapsed.host}"></span>
       <span>ゲームをホスト</span>
     </h3>
-    <div class="formwrapper" [@collapse]="collapsedStr.host">
+    <div class="formwrapper" *ngIf="!collapsed.host" [@collapse]>
       <form #hostForm="ngForm" (ngSubmit)="onHost(hostForm)" novalidate>
         <div>
           <label>port</label>
-          <input type="number" placeholder="default: {{port}}" ngModel required name="address" #address="ngModel">
+          <input type="number" placeholder="default: {{defaultServerPort}}" ngModel required name="address" #address="ngModel">
           <button type="submit">GO</button>
         </div>
       </form>
