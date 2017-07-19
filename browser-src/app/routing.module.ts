@@ -2,13 +2,13 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 
 // components
-import {StarterComponent} from "./components/starter";
+import {LauncherComponent} from "./components/launcher";
 import {ThiefComponent} from "./components/thief";
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/starter', pathMatch: 'full'},
-  {path: 'starter', component: StarterComponent},
+  {path: '', redirectTo: '/launcher', pathMatch: 'full'},
+  {path: 'launcher', component: LauncherComponent},
   {path: 'thief', component: ThiefComponent}
 ];
 

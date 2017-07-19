@@ -1,0 +1,35 @@
+<h1>Scotland Yard Online</h1>
+
+<ul>
+  <li>
+    <h3 (click)="toggleCollapse('join')">
+      <span class="collapse-arrow" [ngClass]="{collapsed: collapsed.join}"></span>
+      <span>ゲームに参加</span>
+    </h3>
+    <div class="formwrapper" [ngClass]="{collapsed: collapsed.join}">
+      <form #joinForm="ngForm" (ngSubmit)="onJoin(joinForm)" novalidate>
+        <div>
+          <label>IP:(port)</label>
+          <input type="text" ngModel required name="address" #address="ngModel">
+          <button type="submit">GO</button>
+        </div>
+      </form>
+    </div>
+  </li>
+
+  <li>
+    <h3 (click)="toggleCollapse('host')">
+      <span class="collapse-arrow" [ngClass]="{collapsed: collapsed.host}"></span>
+      <span>ゲームをホスト</span>
+    </h3>
+    <div class="formwrapper" [ngClass]="{collapsed: collapsed.host}">
+      <form #hostForm="ngForm" (ngSubmit)="onHost(hostForm)" novalidate>
+        <div>
+          <label>port</label>
+          <input type="number" placeholder="default: {{port}}" ngModel required name="address" #address="ngModel">
+          <button type="submit">GO</button>
+        </div>
+      </form>
+    </div>
+  </li>
+</ul>

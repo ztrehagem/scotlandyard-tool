@@ -1,0 +1,59 @@
+h1 {
+  margin: 0;
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  background-color: gray;
+  box-shadow: 0 0 5px black;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+
+  li {
+    flex: 1 1 50%;
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid black;
+    box-shadow: 0 0 2px gray;
+
+    h3 {
+      cursor: pointer;
+      margin: 0;
+      padding: 1rem;
+      background-color: lightgray;
+      * {
+        vertical-align: middle;
+      }
+      .collapse-arrow {
+        transition: .2s;
+        display: inline-block;
+        width: 1rem;
+        height: 0.5rem;
+        background:
+          linear-gradient(to top right, transparent 50%, black 50.5%) no-repeat top left/50% 100%,
+          linear-gradient(to top left, transparent 50%, black 50.5%) no-repeat top right/50% 100%;
+        &.collapsed {
+          transform: rotateZ(-90deg);
+        }
+      }
+    }
+
+    div.formwrapper {
+      transition: 0.5s;
+      height: auto;
+      overflow: hidden;
+      &.collapsed {
+        height: 0px;
+      }
+
+      form {
+        padding: 1rem;
+      }
+    }
+  }
+}
