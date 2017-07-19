@@ -28,7 +28,7 @@ import {ThiefComponent} from "./components/thief";
     LauncherComponent,
     ThiefComponent
   ],
-  // providers: [],
+  providers: [],
   bootstrap: [RootComponent]
 })
 export class AppModule { }
