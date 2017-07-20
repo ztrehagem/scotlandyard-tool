@@ -7,21 +7,21 @@ h1 {
   box-shadow: 0 0 5px black;
 }
 
-ul {
+ul.buttons {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start;
 
-  li {
-    flex: 1 1 50%;
+  > li {
+    flex: 1 1 200px;
     text-align: center;
     margin: 1rem;
     border: 1px solid black;
     box-shadow: 0 0 2px gray;
 
-    h3 {
+    > h3 {
       cursor: pointer;
       margin: 0;
       padding: 1rem;
@@ -43,12 +43,39 @@ ul {
       }
     }
 
-    div.formwrapper {
+    > div.form-wrapper {
       transition: 0.5s;
       overflow: hidden;
 
-      form {
+      > form {
         padding: 1rem;
+
+        > ul {
+          list-style: none;
+          padding: 0;
+          margin: 0 auto;
+          display: table;
+          max-width: 100%;
+
+          > li {
+            text-align: right;
+            margin: 0.5rem 0;
+
+            * {
+              vertical-align: middle;
+              line-height: 1.5rem;
+            }
+
+            label {
+              white-space: nowrap;
+            }
+
+            input {
+              padding: 0.2em 0.5rem;
+              font-size: 1rem;
+            }
+          }
+        }
       }
     }
   }
