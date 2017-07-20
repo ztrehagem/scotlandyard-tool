@@ -9,8 +9,12 @@
     <div class="formwrapper" *ngIf="!collapsed.join" [@collapse]>
       <form #joinForm="ngForm" (ngSubmit)="onJoin(joinForm)" novalidate>
         <div>
+          <label>なまえ</label>
+          <input type="text" name="name" [(ngModel)]="hoge" required>
+        </div>
+        <div>
           <label>IP:(port)</label>
-          <input type="text" ngModel required name="address" #address="ngModel">
+          <input type="text" name="address" ngModel required>
           <button type="submit">GO</button>
         </div>
       </form>
@@ -25,8 +29,12 @@
     <div class="formwrapper" *ngIf="!collapsed.host" [@collapse]>
       <form #hostForm="ngForm" (ngSubmit)="onHost(hostForm)" novalidate>
         <div>
+          <label>なまえ</label>
+          <input type="text" name="name" [(ngModel)]="hoge" required>
+        </div>
+        <div>
           <label>port</label>
-          <input type="number" placeholder="default: {{defaultServerPort}}" ngModel required name="address" #address="ngModel">
+          <input type="number" name="port" ngModel placeholder="default: {{defaultServerPort}}">
           <button type="submit">GO</button>
         </div>
       </form>
