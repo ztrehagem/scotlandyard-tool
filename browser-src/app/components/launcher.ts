@@ -3,6 +3,8 @@ import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
 import {DEFAULT_SERVER_PORT} from "app/constants";
 
+const {server} = remote.require('application/server');
+
 @Component({
   selector: 'launcher',
   templateUrl: './launcher.html',
@@ -31,8 +33,9 @@ export class LauncherComponent implements OnInit {
   onJoin(form: NgForm) {
     console.log('join address', form.value);
   }
-  onHost(form: NgForm) {
+  async onHost(form: NgForm) {
     console.log('host address', form.value);
+    await server.boot();
     this.router.navigate(['game']);
   }
   toggleCollapse(target: string) {
