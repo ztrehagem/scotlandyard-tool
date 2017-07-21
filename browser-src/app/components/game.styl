@@ -29,10 +29,10 @@
 }
 
 section.head-bar {
-  height: 5vh
   background-color: lightgray;
   box-shadow: 0 0 3px black;
   line-height: 2.5rem;
+  height: 2.5rem;
 
   > ul {
     list-style: none;
@@ -62,7 +62,7 @@ section.head-bar {
 }
 
 section.polices {
-  height: 15vh;
+  height: 7rem;
   padding: 0.5rem;
 
   > ul {
@@ -141,19 +141,18 @@ section.polices {
 
 section.field {
   flex: 1 1 100%;
-  height: 80vh;
+  height: calc(100vh - 9.5rem);
 }
 
 section.thief-history {
   flex: 0 0 200px;
-  height: 80vh;
-  overflow: scroll;
+  height: calc(100vh - 9.5rem);
 
   background-color: lightgray;
   // border: 2px dashed black;
   box-shadow: inset 0 0 10px black;
 
-  .status {
+  > .status {
     height: 4rem;
     line-height: 2rem;
     text-align: center;
@@ -171,7 +170,8 @@ section.thief-history {
   }
 
   > ul {
-    height: "calc(100% - 4rem)";
+    height: calc(100% - 4rem);
+    overflow: scroll;
     list-style: none;
     padding: 0;
     margin: 0;
