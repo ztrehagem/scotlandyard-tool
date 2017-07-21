@@ -1,0 +1,104 @@
+<section class="head-bar">
+  <ul>
+    <li class="turn">
+      <span>ターン</span>
+      <span>(</span>
+      <strong class="turn-num">{{1}}</strong>
+      <span>)</span>
+      <span class="turn-name">{{'刑事'}}</span>
+    </li>
+  </ul>
+</section>
+
+<section class="polices">
+  <ul>
+    <li class="red inactive">
+      <div class="status">
+        <!-- <span class="position">[100]&gt;</span> -->
+        <span class="ticket taxi">TAXI</span>
+        <!-- <span class="distination">&gt;[200]</span> -->
+      </div>
+      <ul class="tickets">
+        <li class="ticket taxi">{{9}}</li>
+        <li class="ticket bus">{{8}}</li>
+        <li class="ticket underground">{{4}}</li>
+      </ul>
+    </li>
+    <li class="blue active">
+      <div class="status">
+        <!-- <span class="position">[100]&gt;</span> -->
+        <span class="ticket">選択中</span>
+        <!-- <span class="distination">&gt;[?]</span> -->
+      </div>
+      <ul class="tickets">
+        <li class="ticket taxi">{{9}}</li>
+        <li class="ticket bus">{{8}}</li>
+        <li class="ticket underground">{{4}}</li>
+      </ul>
+    </li>
+    <li class="yellow">
+      <div class="status">
+        <!-- <span class="position">[100]</span> -->
+        <span class="ticket">−</span>
+        <!-- <span class="distination">[?]</span> -->
+      </div>
+      <ul class="tickets">
+        <li class="ticket taxi">{{9}}</li>
+        <li class="ticket bus">{{8}}</li>
+        <li class="ticket underground">{{4}}</li>
+      </ul>
+    </li>
+    <li class="green">
+      <div class="status">
+        <!-- <span class="position">[100]</span> -->
+        <span class="ticket">−</span>
+        <!-- <span class="distination">[?]</span> -->
+      </div>
+      <ul class="tickets">
+        <li class="ticket taxi">{{9}}</li>
+        <li class="ticket bus">{{8}}</li>
+        <li class="ticket underground">{{4}}</li>
+      </ul>
+    </li>
+    <li class="black">
+      <div class="status">
+        <!-- <span class="position">[100]</span> -->
+        <span class="ticket">−</span>
+        <!-- <span class="distination">[?]</span> -->
+      </div>
+      <ul class="tickets">
+        <li class="ticket taxi">{{9}}</li>
+        <li class="ticket bus">{{8}}</li>
+        <li class="ticket underground">{{4}}</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<div class="field-history">
+  <section class="field">
+    (field)
+  </section>
+
+  <section class="thief-history">
+    <div class="status">
+      <div>[怪盗]</div>
+      <ul>
+        <li>
+          <span class="ticket black">B</span>
+          <span>x{{5}}</span>
+        </li>
+        <li>
+          <span class="ticket double">D</span>
+          <span>x{{2}}</span>
+        </li>
+      </ul>
+    </div>
+    <ul>
+      <li *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]">
+        <span class="number">{{i}}</span>
+        <span class="ticket taxi">TAXI</span>
+      </li>
+    </ul>
+  </section>
+</div>

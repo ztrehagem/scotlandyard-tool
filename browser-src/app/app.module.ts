@@ -10,6 +10,7 @@ import RoutingModule from './routing.module';
 // desclarations
 import {RootComponent} from './components/root';
 import {LauncherComponent} from "./components/launcher";
+import {GameComponent} from "./components/game";
 import {ThiefComponent} from "./components/thief";
 
 // providers
@@ -26,6 +27,7 @@ import {ThiefComponent} from "./components/thief";
   declarations: [
     RootComponent,
     LauncherComponent,
+    GameComponent,
     ThiefComponent
   ],
   providers: [],
