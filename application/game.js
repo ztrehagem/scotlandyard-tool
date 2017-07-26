@@ -195,10 +195,21 @@ exports.Game = class Game {
   }
 
   save() {
-    // TODO
+    var fs = require('fs');
+    const t = JSON.stringify(this);
+    fs.writeFile('../game_state.json', t, (err) => {
+        if (err) throw err;
+    });
+    
+    return true;
   }
 
   load() {
-    // TODO
+    var fs = require('fs');
+    fs.readFile('../game_state.json', 'utf8', (err, text) => {
+        Object.assign(this, JSON.parse(text));
+        console.log(this);
+    });
+    return true;
   }
 };
