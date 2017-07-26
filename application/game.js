@@ -207,7 +207,7 @@ exports.Game = class Game {
 
   load() {
     return new Promise((res, reject) => {
-        var fs = require('fs');
+      var fs = require('fs');
         fs.readFile('../game_state.json', 'utf8', (err, text) => {
         if (err) reject();
         else {
