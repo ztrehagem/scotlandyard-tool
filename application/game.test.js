@@ -15,6 +15,6 @@ it('reg p3', game.registerPoliceMovement(2, 'bus'), true);
 it('reg p4', game.registerPoliceMovement(3, 'bus'), true);
 it('reg p5', game.registerPoliceMovement(4, 'bus'), true);
 it('apply', game.applyPoliceMovement(), true);
-it('save test', game.save(), true);
-it('load test', game.load(), true)
+game.save();
+game.load();
 console.log("success")

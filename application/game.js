@@ -194,22 +194,27 @@ exports.Game = class Game {
     }
   }
 
-  save() {
-    var fs = require('fs');
-    const t = JSON.stringify(this);
-    fs.writeFile('../game_state.json', t, (err) => {
-        if (err) throw err;
+  save() { 
+    return new Promise((res, reject) => {
+        var fs = require('fs');
+        const t = JSON.stringify(this);
+        fs.writeFile('../game_state.json', t, (err) => {
+            if (err) reject();
+            res();
+        });
     });
-    
-    return true;
   }
 
   load() {
-    var fs = require('fs');
-    fs.readFile('../game_state.json', 'utf8', (err, text) => {
-        Object.assign(this, JSON.parse(text));
-        console.log(this);
+    return new Promise((res, reject) => {
+        var fs = require('fs');
+        fs.readFile('../game_state.json', 'utf8', (err, text) => {
+        if (err) reject();
+        else {
+                Object.assign(this, JSON.parse(text));    
+                res();
+            }
+        });
     });
-    return true;
   }
 };
