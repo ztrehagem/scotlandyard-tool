@@ -35,8 +35,12 @@ export class LauncherComponent implements OnInit {
   }
   async onHost(form: NgForm) {
     console.log('host address', form.value);
-    await server.boot();
-    this.router.navigate(['game']);
+    try {
+      await server.boot(form.value.port);
+      this.router.navigate(['game']);
+    } catch (e) {
+      console.log('failed host');
+    }
   }
   toggleCollapse(target: string) {
     this.collapsed[target] = !this.collapsed[target];
